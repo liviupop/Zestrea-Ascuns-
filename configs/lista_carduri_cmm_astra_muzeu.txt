@@ -1,0 +1,121 @@
+
+[160,9,123,122,168]
+Location: /var/www/html/amplitudejs/examples/songs/hu_01_culori.mp3
+
+[83,240,221,84,42]
+Location: /var/www/html/amplitudejs/examples/songs/hu_01_culori.mp3
+
+[144,218,129,124,183]
+Location: /var/www/html/amplitudejs/examples/songs/ro_01_boi.mp3
+
+[51,63,52,85,109]
+Location: /var/www/html/amplitudejs/examples/songs/ro_01_boi.mp3
+
+[182,17,228,157,222]
+Location: /var/www/html/amplitudejs/examples/songs/ro_04_bidinele.mp3
+
+[208,118,130,124,88]
+Location: /var/www/html/amplitudejs/examples/songs/ro_04_bidinele.mp3
+
+[16,165,122,122,181]
+Location: /var/www/html/amplitudejs/examples/songs/rr_03_maiereni.mp3
+
+[96,52,139,124,163]
+Location: /var/www/html/amplitudejs/examples/songs/rr_03_maiereni.mp3
+
+[3,10,63,85,99]
+Location: /var/www/html/amplitudejs/examples/songs/de_01_baluri.mp3
+
+[160,185,220,163,102]
+Location: /var/www/html/amplitudejs/examples/songs/de_01_baluri.mp3
+
+[176,107,213,163,173]
+Location: /var/www/html/amplitudejs/examples/songs/hu_01_song_nuntasi.mp3
+
+[115,4,74,85,104]
+Location: /var/www/html/amplitudejs/examples/songs/hu_01_song_nuntasi.mp3
+
+[80,127,141,124,222]
+Location: /var/www/html/amplitudejs/examples/songs/ro_01_song_greu.mp3
+
+[67,219,48,85,253]
+Location: /var/www/html/amplitudejs/examples/songs/ro_01_song_greu.mp3
+
+[83,127,58,85,67]
+Location: /var/www/html/amplitudejs/examples/songs/rr_01_corturari.mp3
+
+[208,138,119,122,87]
+Location: /var/www/html/amplitudejs/examples/songs/rr_01_corturari.mp3
+
+[214,44,117,254,113]
+Location: /var/www/html/amplitudejs/examples/songs/rr_04_prislop.mp3
+
+[208,133,127,122,80]
+Location: /var/www/html/amplitudejs/examples/songs/rr_04_prislop.mp3
+
+[176,191,127,122,10]
+Location: /var/www/html/amplitudejs/examples/songs/de_01_song_fanfara.mp3
+
+[224,179,121,122,80]
+Location: /var/www/html/amplitudejs/examples/songs/de_01_song_fanfara.mp3
+
+[115,189,37,85,190]
+Location: /var/www/html/amplitudejs/examples/songs/hu_02_nunta.mp3
+
+[53,91,221,233,90]
+Location: /var/www/html/amplitudejs/examples/songs/hu_02_nunta.mp3
+
+[179,55,59,85,234]
+Location: /var/www/html/amplitudejs/examples/songs/ro_02_case.mp3
+
+[224,99,136,124,119]
+Location: /var/www/html/amplitudejs/examples/songs/ro_02_case.mp3
+
+[148,226,175,137,80]
+Location: /var/www/html/amplitudejs/examples/songs/rr_01_song_ustar.mp3
+
+[64,100,143,124,215]
+Location: /var/www/html/amplitudejs/examples/songs/rr_01_song_ustar.mp3
+
+[163,52,162,84,97]
+Location: /var/www/html/amplitudejs/examples/songs/de_02_nunta.mp3
+
+[144,9,142,124,107]
+Location: /var/www/html/amplitudejs/examples/songs/de_02_nunta.mp3
+
+[6,194,56,254,2]
+Location: /var/www/html/amplitudejs/examples/songs/hu_02_song_aries.mp3
+
+[182,124,222,254,234]
+Location: /var/www/html/amplitudejs/examples/songs/hu_02_song_aries.mp3
+
+[83,156,168,84,51]
+Location: /var/www/html/amplitudejs/examples/songs/ro_02_song_joc.mp3
+
+[82,160,145,171,200]
+Location: /var/www/html/amplitudejs/examples/songs/ro_02_song_joc.mp3
+
+[195,206,168,84,241]
+Location: /var/www/html/amplitudejs/examples/songs/rr_02_poezia.mp3
+
+[240,174,122,122,94]
+Location: /var/www/html/amplitudejs/examples/songs/rr_02_poezia.mp3
+
+[96,74,123,122,43]
+Location: /var/www/html/amplitudejs/examples/songs/de_02_song_lebt.mp3
+
+[160,212,138,124,130]
+Location: /var/www/html/amplitudejs/examples/songs/de_02_song_lebt.mp3
+
+[192,164,140,124,148]
+Location: /var/www/html/amplitudejs/examples/songs/ro_03_bivolite.mp3
+
+[96,107,123,122,10]
+Location: /var/www/html/amplitudejs/examples/songs/ro_03_bivolite.mp3
+
+[80,48,139,124,151]
+Location: /var/www/html/amplitudejs/examples/songs/rr_02_song_gulo.mp3
+
+[48,23,123,122,38]
+Location: /var/www/html/amplitudejs/examples/songs/rr_02_song_gulo.mp3
+
