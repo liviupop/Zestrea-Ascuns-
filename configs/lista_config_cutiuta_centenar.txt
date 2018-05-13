@@ -1,0 +1,29 @@
+[42,55,156,9,136]
+Location: /home/pi/Music/1.mp3
+
+[99,56,180,202,37]
+Location: /home/pi/Music/2.mp3
+
+[163,68,187,202,150]
+Location: /home/pi/Music/3.mp3
+
+[115,239,182,202,224]
+Location: /home/pi/Music/4.mp3
+
+[227,38,185,202,182]
+Location: /home/pi/Music/5.mp3
+
+[67,40,185,202,24]
+Location: /home/pi/Music/6.mp3
+
+[19,38,185,202,70]
+Location: /home/pi/Music/7.mp3
+
+[163,75,187,202,153]
+Location: /home/pi/Music/8.mp3
+
+[243,224,182,202,111]
+Location: /home/pi/Music/9.mp3
+
+[3,118,186,202,5]
+Location: /home/pi/Music/10.mp3
