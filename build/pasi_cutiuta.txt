@@ -1,0 +1,254 @@
+Cutiuta - All the steps
+
+
+I used a macOS Sierra iMac 2010 27 inch to install the operating system.
+
+1. Put the microSD in the computer.
+
+2. Found out the disk number with the command diskutil list
+
+3. Downloaded the light image of Raspbian Jessie from raspberrypi.org 2017-08-16-raspbian-stretch-lite.img or the PiMusicBox image 
+
+4. Copied the image on the microSD Card with the command sudo dd bs=1m if=/Users/liviupop/Desktop/2017-08-16-raspbian-stretch-lite.img  of=/dev/rdisk1 conv=sync -v
+
+5. Enabled ssh by creating a file by starting TextEdit and saving it as ssh (not ssh.txt) on the partition boot of the microSD card.
+
+6. Enabled spi by editing the config.txt file on boot partition and adding dtparam=spi=on. This can also be done later by 
+(Run this command: sudo nano /boot/config.txt. 
+Add this at the end of the file: dtparam=spi=on.
+Save file pressing: CTRL + X , Y and Enter.
+Reboot your system: sudo reboot.) - https://raspberrypi.stackexchange.com/questions/48228/how-to-enable-spi-on-raspberry-pi-3
+
+I found this very helpful for setting up mine: https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget/ethernet-gadget
+
+The essential steps are:
+
+1: open up the boot partition on the micro sd with finder and in the file config.txt add dtoverlay=dwc2 to a line on the bottom and save it.
+
+2: Create a new file called ssh using textedit and save it onto the boot partition. Use 'get info' to remove the extension on the file, and it should appear as an EXEC file. You can now eject the card and boot it on your RPi
+
+3: Finally, open up the cmdline.txt. replace all text with this:
+
+dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet init=/usr/lib/raspi-config/init_resize.sh 
+
+Be careful with this step as the formatting is very picky in this file
+
+4: Eject your MicroSD card and boot it up in your pi! make sure you plug the usb cable from your mac into the USB input of your pi - this can also power it.
+
+5: Once its booted you should now be able to open up terminal, and using ping raspberrypi.local you can see the RPi's IP address.
+
+
+7. Unmount boot partition from Finder and put the microSD card in RPi. Plug the ethernet and the micrusb on the RPi.
+
+8. Find the IP of RPi with nmap
+
+9. Create Music folder in /pi/user with mkdir Music
+
+10. Download the .wav files in Music folder (/pi/user/Music) by using the command:
+
+wget wget -r -l1 -A.mp3 http://uzinaduzina.org/12/1.mp3 . Move all the wav to Music with command  sudo mv *.* /home/pi/Music
+
+Change the volume with amixer set 'PCM' 85%. Test to see that it plays files with aplay 1.wav
+
+——
+
+
+11. Start installing the instructables from http://www.instructables.com/id/Raspberry-Pi-based-RFID-Music-Robot/
+
+12. sudo apt-get install python2.7-dev
+
+13. Install git:
+sudo apt-get install git --fix-missing
+
+14. Remove the annoing locale error:
+sudo nano /etc/ssh/ssh_config , comment SendEnv LANG LC_* (If you have admin rights, stop ssh from sending the environment variables by commenting out the SendEnv LANG LC_* line in the local /etc/ssh/ssh_config file. (Thanks to this answer. See Bug 1285 for OpenSSH for more.) - https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl)
+
+
+15. git clone https://github.com/lthiery/SPI-Py 
+git clone https://github.com/lthiery/SPI-Py
+
+
+https://github.com/simonmonk/SPI-Py
+sudo python setup.py install
+
+16. cd ..
+git clone https://github.com/mxgxw/MFRC522-python
+git clone https://github.com/ondryaso/pi-rc522
+
+https://github.com/lthiery/SPI-Py
+17. wget 'https://www.dropbox.com/s/tox1gs2zsbhymuv/rfidmp3player.py'
+wget 'https://www.dropbox.com/s/p9qizqbab014xae/rfidconfig.txt'
+
+
+18. Modify the startup file: sudo nano /etc/rc.local 
+add sudo python /home/pi/MFRC522-python/rfidmp3player.py
+
+19. Just for fund add startup sound
+sudo nano /etc/rc.local
+add mpg123 /home/pi/Music/startup.mp3
+
+
+sudo apt-get install python-pygame
+
+
+20. Enable Sound USB
+
+run sudo nano /etc/asound.conf and put the following in the file and save
+
+pcm.!default  {
+ type hw card 1
+}
+ctl.!default {
+ type hw card 1
+}
+
+
+
+
+
+20. Close, reboot, deliver.
+
+192.168.2.17
+
+Cut the fat using diet raspbian and ansible:
+
+df -Bm 
+
+
+sudo rm -r /usr/share/doc/ /usr/share/man/ /opt/vc/src /usr/share/icons/gnome/icon-theme.cache /opt/vc/src/hello_pi/hello_video/test.h264
+
+
+sudo apt-get remove adwaita-icon-theme alacarte desktop-base desktop-file-utils epiphany-browser* fontconfig* fonts* galculator gir1.2* gnome* gpicview gsfonts* gtk* gvfs* hicolor-icon-theme libpango* libreoffice* librevenge* liblightdm* lightdm* lx* nuscratch omxplayer openbox pcmanfm raspberrypi-artwork raspberrypi-ui-mods rc-gui scratch xfonts* xarchiver xinit xpdf xserver* x11* zenity* freepats gstreamer* jackd* pimixer sonic-pi supercollider* timidity esound-common bluej greenfoot groff idle* leafpad python3* pypy-upstream oracle* ruby* claws-mail* coinor* dillo libopencv* minecraft-pi netsurf* penguinspuzzle pipanel python-minecraftpi python-pifacecommon squeak* man-db manpages wolfram-engine
+
+apt-get -y autoremove
+
+apt-get clean
+
+
+wpa_cli
+
+ifconfig wlan0
+
+sudo iwlist wlan0 scan
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+Guest, Expozitie
+
+
+
+network={
+    ssid="getout"
+    psk="PZAOIUTJ"
+}
+
+network={
+    ssid="folclor"
+    psk="academia"
+}
+
+network={
+   ssid="Guest"
+   key_mgmt=NONE
+}
+
+network={
+   ssid="Expozitie"
+   key_mgmt=NONE
+}
+
+
+
+
+wpa_cli -i wlan0 reconfigure
+
+alsamixer
+
+sudo nano ~/.asoundrc
+
+pcm.!default {
+    type hw
+    card 0
+}
+
+ctl.!default {
+    type hw
+    card 0
+}
+
+sudo nano /etc/modprobe.d/alsa-base.conf
+
+sudo dd if=/dev/disk3 of=/Users/academia/Desktop/cutiuta-backup.img
+
+dd if=/dev/disk1s1 of=/Users/m/Desktop/red.img bs=1M count=2048
+
+dd if=/dev/disk3 of=/Users/liviupop/Desktop/red.img bs=1M count=2048
+
+sudo dd if=/dev/disk2 of=/Users/liviupop/Desktop/raspizerow_cmm_ok.img bs=1m count=1800
+
+
+
+[163,68,187,202,150]
+Description: Play song 1
+FileUrlFunction:home/pi/Music/1.mp3
+ActionType: OS
+TagType: 1
+
+
+[227,38,185,202,182]
+Description: Play song 2
+FileUrlFunction: home/pi/Music/2.mp3
+ActionType: OS
+TagType: 2
+
+[99,56,180,202,37]
+Description: Play song 3
+FileUrlFunction:home/pi/Music/3.mp3
+ActionType: OS
+TagType: 3
+
+[243,116,186,202,247]
+Description: Play song 4
+FileUrlFunction:home/pi/Music/4.mp3
+ActionType: OS
+TagType: 4
+
+
+[139,177,97,208,139]
+Description: Play song 5
+FileUrlFunction:home/pi/Music/5.mp3
+ActionType: OS
+TagType: 5
+
+
+
+
+
+http://uzinaduzina.org/12/1.mp3 http://uzinaduzina.org/12/2.mp3 http://uzinaduzina.org/12/3.mp3 http://uzinaduzina.org/12/4.mp3 http://uzinaduzina.org/12/5.mp3 http://uzinaduzina.org/12/6.mp3 http://uzinaduzina.org/12/7.mp3 
+
+
+
+
+
+
+
+163,68,187,202,150
+
+99,56,180,202,37
+
+
+227,38,185,202,182
+
+http://za.local/howler.js/examples/player/
+
+/var/www/html/howler.js/examples/player/audio/1.mp3
+
+
+
+
+Try to remove the hidden file .[yourfilename].swp, which is stored in the same folder as the file that you are trying to open.
+In your case try the shell command sudo rm /etc/.rc.local.swp .
+
+
+sudo python /home/pi/MFRC522-pythonrfid2mp3.py > /home/pi/MFRC522-python/log_songs.txt
+
+
